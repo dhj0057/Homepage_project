@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health</title>
+  <link rel="stylesheet" href="../css/health.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>건강 관리</h1>
+      <p>약학적 관점에서 영양제 및 건강 지표 관리</p>
+    </header>
+
+    <section class="panel">
+      <h2>건강 지표</h2>
+      <div class="metrics-grid">
+        <article class="metric-card">
+          <div class="metric-label">혈압</div>
+          <div class="metric-value-row"><strong>118/75</strong><span>mmHg</span></div>
+          <span class="badge badge-green">정상</span>
+        </article>
+        <article class="metric-card">
+          <div class="metric-label">심박수</div>
+          <div class="metric-value-row"><strong>62</strong><span>bpm</span></div>
+          <span class="badge badge-green">정상</span>
+        </article>
+        <article class="metric-card">
+          <div class="metric-label">혈당</div>
+          <div class="metric-value-row"><strong>92</strong><span>mg/dL</span></div>
+          <span class="badge badge-green">정상</span>
+        </article>
+        <article class="metric-card">
+          <div class="metric-label">나트륨 섭취</div>
+          <div class="metric-value-row"><strong>1,850</strong><span>mg/일</span></div>
+          <span class="badge badge-green">양호</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title-row">
+        <h2>앓고있는 질환</h2>
+        <button class="primary-button" type="button"><span>＋</span> 질환 추가</button>
+      </div>
+
+      <div class="list-stack">
+        <article class="list-card">
+          <div class="icon-box icon-red">📄</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>고혈압 전단계</h3>
+              <span class="badge badge-blue">관찰 중</span>
+            </div>
+            <p class="small-text"><strong>진단일:</strong> 2025-03-15</p>
+            <p class="note-box">📋 정기적인 혈압 모니터링 필요, 나트륨 섭취 제한</p>
+          </div>
+        </article>
+
+        <article class="list-card">
+          <div class="icon-box icon-red">📄</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>철분 결핍성 빈혈</h3>
+              <span class="badge badge-orange">치료 중</span>
+            </div>
+            <p class="small-text"><strong>진단일:</strong> 2024-11-20</p>
+            <p class="note-box">📋 철분제 복용 중, 3개월마다 혈액 검사</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>복용 중인 영양제 및 약물</h2>
+      <div class="list-stack">
+        <article class="list-card">
+          <div class="icon-box icon-primary">💊</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>종합비타민</h3><span class="badge badge-blue">영양제</span><span class="status-icon">✅</span>
+            </div>
+            <div class="detail-grid"><p><strong>용량:</strong> 1정</p><p><strong>복용:</strong> 1일 1회 (아침 식후)</p><p class="full"><strong>목적:</strong> 전반적 영양 보충</p></div>
+          </div>
+        </article>
+
+        <article class="list-card">
+          <div class="icon-box icon-primary">💊</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>오메가-3</h3><span class="badge badge-blue">영양제</span><span class="status-icon">✅</span>
+            </div>
+            <div class="detail-grid"><p><strong>용량:</strong> 2캡슐</p><p><strong>복용:</strong> 1일 1회 (저녁 식후)</p><p class="full"><strong>목적:</strong> 심혈관 건강, 항염</p></div>
+          </div>
+        </article>
+
+        <article class="list-card">
+          <div class="icon-box icon-primary">💊</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>비타민 D</h3><span class="badge badge-blue">영양제</span><span class="status-icon">✅</span>
+            </div>
+            <div class="detail-grid"><p><strong>용량:</strong> 1000 IU</p><p><strong>복용:</strong> 1일 1회 (아침)</p><p class="full"><strong>목적:</strong> 뼈 건강, 면역력</p></div>
+          </div>
+        </article>
+
+        <article class="list-card">
+          <div class="icon-box icon-primary">💊</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>마그네슘</h3><span class="badge badge-blue">영양제</span><span class="status-icon muted">📅</span>
+            </div>
+            <div class="detail-grid"><p><strong>용량:</strong> 400mg</p><p><strong>복용:</strong> 1일 1회 (취침 전)</p><p class="full"><strong>목적:</strong> 근육 회복, 수면 질</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>오늘의 복용 일정</h2>
+      <div class="schedule-stack">
+        <div class="schedule-row done"><strong>07:30</strong><div><span>종합비타민</span><span>비타민 D</span></div><em>✅</em></div>
+        <div class="schedule-row"><strong>12:00</strong><div class="empty">복용 없음</div><em></em></div>
+        <div class="schedule-row done"><strong>19:00</strong><div><span>오메가-3</span></div><em>✅</em></div>
+        <div class="schedule-row warning"><strong>22:30</strong><div><span>마그네슘</span></div><em>⚠️</em></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>건강 목표 달성률</h2>
+      <div class="goals-stack">
+        <article class="goal-item">
+          <div class="goal-top"><div><h3>나트륨 섭취량 2,000mg 이하 유지</h3><p>현재: <strong>1,850mg</strong> / 목표: &lt; 2,000mg</p></div><span class="badge badge-green">달성 중</span></div>
+          <div class="progress"><div class="progress-bar green" style="width: 92.5%;"></div></div>
+        </article>
+        <article class="goal-item">
+          <div class="goal-top"><div><h3>충분한 수분 섭취</h3><p>현재: <strong>2.2L</strong> / 목표: 2.5L</p></div><span class="badge badge-yellow">개선 필요</span></div>
+          <div class="progress"><div class="progress-bar blue" style="width: 88%;"></div></div>
+        </article>
+        <article class="goal-item">
+          <div class="goal-top"><div><h3>수면 시간 확보</h3><p>현재: <strong>7.2시간</strong> / 목표: 8시간</p></div><span class="badge badge-blue">양호</span></div>
+          <div class="progress"><div class="progress-bar green" style="width: 90%;"></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="insight-box">
+      <h3>💊 약학적 인사이트</h3>
+      <ul>
+        <li>오메가-3는 지용성이므로 지방이 포함된 식사 후 복용 시 흡수율 증가</li>
+        <li>마그네슘은 근육 이완 효과가 있어 취침 전 복용 시 수면 질 개선 가능</li>
+        <li>나트륨 섭취량 관리는 혈압 조절과 직결 (현재 1,850mg은 권장 범위 내)</li>
+        <li>비타민 D는 칼슘 흡수를 돕기 때문에 뼈 건강에 필수적</li>
+      </ul>
+    </section>
+
+    <section class="notice-box">
+      <p><strong>알림:</strong> 현재 약물 및 건강 지표 데이터는 예시입니다. 실제 복용 중인 약물이나 건강 상태는 반드시 의료 전문가와 상담하시기 바랍니다.</p>
+    </section>
+  </main>
+</body>
+</html>

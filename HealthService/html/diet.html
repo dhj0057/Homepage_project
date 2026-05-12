@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>식단 관리</title>
+  <link rel="stylesheet" href="../css/diet.css" />
+</head>
+<body>
+  <main class="page">
+
+    <header class="page-header row-between">
+      <div>
+        <h1>식단 관리</h1>
+        <p>영양학적 데이터 기반 식사 기록</p>
+      </div>
+      <button class="primary-button">＋ 식사 추가</button>
+    </header>
+
+    <section class="card">
+      <div class="section-title">
+        <span>🎯</span>
+        <h2>목표 설정</h2>
+      </div>
+
+      <div class="goal-grid">
+        <button class="goal-card">
+          <div class="goal-title"><span class="dot"></span><strong>다이어트</strong></div>
+          <p>체지방 감소를 위한 칼로리 제한</p>
+          <small>칼로리: 1800 kcal<br />단백질: 140g / 탄수화물: 180g / 지방: 50g</small>
+        </button>
+
+        <button class="goal-card">
+          <div class="goal-title"><span class="dot"></span><strong>벌크업</strong></div>
+          <p>근육량 증가를 위한 칼로리 증량</p>
+          <small>칼로리: 2800 kcal<br />단백질: 180g / 탄수화물: 350g / 지방: 80g</small>
+        </button>
+
+        <button class="goal-card selected">
+          <div class="goal-title"><span class="dot active"></span><strong>유지</strong></div>
+          <p>현재 체중 및 근육량 유지</p>
+          <small>칼로리: 2400 kcal<br />단백질: 160g / 탄수화물: 280g / 지방: 65g</small>
+        </button>
+      </div>
+
+      <div class="current-goal">
+        <strong>현재 목표:</strong> 유지 - 현재 체중 및 근육량 유지
+      </div>
+    </section>
+
+    <section class="summary-grid">
+      <div class="summary-card">
+        <p>🔥 칼로리</p>
+        <h3>2,150 <span>/ 2400 kcal</span></h3>
+        <div class="progress"><div style="width: 89.5%"></div></div>
+      </div>
+
+      <div class="summary-card">
+        <p>🍎 단백질</p>
+        <h3>145 <span>/ 160g</span></h3>
+        <div class="progress"><div style="width: 90.6%"></div></div>
+      </div>
+
+      <div class="summary-card">
+        <p>🔵 탄수화물</p>
+        <h3>240 <span>/ 280g</span></h3>
+        <div class="progress"><div style="width: 85.7%"></div></div>
+      </div>
+
+      <div class="summary-card">
+        <p>🟡 지방</p>
+        <h3>59 <span>/ 65g</span></h3>
+        <div class="progress"><div style="width: 90.7%"></div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>오늘의 식사</h2>
+
+      <div class="meal">
+        <div class="meal-time">🕒<br />07:30</div>
+        <div>
+          <h3>아침 - 오트밀</h3>
+          <p>🔥 450 kcal · 단백질 15g · 탄수화물 68g · 지방 12g</p>
+          <div class="chips">
+            <span>오트밀 80g</span><span>바나나 1개</span><span>아몬드 10알</span><span>우유 200ml</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal">
+        <div class="meal-time">🕒<br />12:00</div>
+        <div>
+          <h3>점심 - 닭가슴살 샐러드</h3>
+          <p>🔥 520 kcal · 단백질 45g · 탄수화물 35g · 지방 18g</p>
+          <div class="chips">
+            <span>닭가슴살 150g</span><span>현미밥 100g</span><span>채소 믹스</span><span>올리브유 드레싱</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal">
+        <div class="meal-time">🕒<br />15:30</div>
+        <div>
+          <h3>간식</h3>
+          <p>🔥 180 kcal · 단백질 8g · 탄수화물 22g · 지방 6g</p>
+          <div class="chips">
+            <span>그릭 요거트 150g</span><span>블루베리 50g</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal">
+        <div class="meal-time">🕒<br />19:00</div>
+        <div>
+          <h3>저녁 (운동 후)</h3>
+          <p>🔥 650 kcal · 단백질 52g · 탄수화물 75g · 지방 15g</p>
+          <div class="chips">
+            <span>연어 구이 120g</span><span>고구마 200g</span><span>브로콜리</span><span>현미밥 80g</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal last">
+        <div class="meal-time">🕒<br />21:30</div>
+        <div>
+          <h3>야식</h3>
+          <p>🔥 350 kcal · 단백질 25g · 탄수화물 40g · 지방 8g</p>
+          <div class="chips">
+            <span>프로틴 쉐이크</span><span>바나나 1개</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tip-box">
+      <h3>💡 영양 팁</h3>
+      <ul>
+        <li>운동 직후(19:00) 탄수화물 섭취로 글리코겐 회복 최적화</li>
+        <li>총 단백질 섭취량 145g (체중 kg당 2.0g 기준)</li>
+        <li>나트륨 섭취량 관리 필요 (일일 권장량: 2,300mg 이하)</li>
+      </ul>
+    </section>
+
+    <section class="notice">
+      <strong>알림:</strong> 현재 데이터는 예시입니다. 향후 데이터베이스 연동 시 사용자가 직접 입력하고 저장할 수 있습니다.
+    </section>
+
+  </main>
+</body>
+</html>
