@@ -33,7 +33,11 @@
       <p>영양학적 데이터를 기반으로 하루 식사와 목표 섭취량을 관리합니다.</p>
     </section>
 
-    <section class="section content-card">
+    <section class="section content-card diet-goal-board">
+      <input class="goal-radio" type="radio" name="diet-goal" id="goal-cut" />
+      <input class="goal-radio" type="radio" name="diet-goal" id="goal-maintain" checked />
+      <input class="goal-radio" type="radio" name="diet-goal" id="goal-bulk" />
+
       <div class="section-heading row-between">
         <div>
           <p class="eyebrow">목표 설정</p>
@@ -42,45 +46,97 @@
         <span class="future-pill">DB 저장 예정</span>
       </div>
       <div class="choice-grid">
-        <article class="choice-card">
+        <label class="choice-card" for="goal-cut">
           <strong>다이어트</strong>
           <p>체지방 감소를 위한 칼로리 제한</p>
-          <small>1800 kcal · 단백질 140g</small>
-        </article>
-        <article class="choice-card selected">
+          <small>1800 kcal · 단백질 140g · 탄수화물 180g · 지방 50g</small>
+        </label>
+        <label class="choice-card" for="goal-maintain">
           <strong>유지</strong>
           <p>현재 체중과 근육량 유지</p>
-          <small>2400 kcal · 단백질 160g</small>
-        </article>
-        <article class="choice-card">
+          <small>2400 kcal · 단백질 160g · 탄수화물 280g · 지방 65g</small>
+        </label>
+        <label class="choice-card" for="goal-bulk">
           <strong>벌크업</strong>
           <p>근육량 증가를 위한 섭취량 증가</p>
-          <small>2800 kcal · 단백질 180g</small>
-        </article>
+          <small>2800 kcal · 단백질 180g · 탄수화물 350g · 지방 80g</small>
+        </label>
       </div>
-    </section>
 
-    <section class="section dashboard-grid">
-      <article class="metric-card large-card">
-        <span>칼로리</span>
-        <strong>2,140 / 2,400</strong>
-        <div class="progress"><span style="width: 89%"></span></div>
-      </article>
-      <article class="metric-card">
-        <span>단백질</span>
-        <strong>142g</strong>
-        <p>18g 남음</p>
-      </article>
-      <article class="metric-card">
-        <span>탄수화물</span>
-        <strong>248g</strong>
-        <p>32g 남음</p>
-      </article>
-      <article class="metric-card">
-        <span>지방</span>
-        <strong>62g</strong>
-        <p>목표 근접</p>
-      </article>
+      <div class="goal-summary goal-summary-cut">
+        <div class="dashboard-grid">
+          <article class="metric-card large-card">
+            <span>칼로리</span>
+            <strong>1,620 / 1,800</strong>
+            <div class="progress"><span style="width: 90%"></span></div>
+          </article>
+          <article class="metric-card">
+            <span>단백질</span>
+            <strong>118g</strong>
+            <p>22g 남음</p>
+          </article>
+          <article class="metric-card">
+            <span>탄수화물</span>
+            <strong>145g</strong>
+            <p>35g 남음</p>
+          </article>
+          <article class="metric-card">
+            <span>지방</span>
+            <strong>42g</strong>
+            <p>8g 남음</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="goal-summary goal-summary-maintain">
+        <div class="dashboard-grid">
+          <article class="metric-card large-card">
+            <span>칼로리</span>
+            <strong>2,140 / 2,400</strong>
+            <div class="progress"><span style="width: 89%"></span></div>
+          </article>
+          <article class="metric-card">
+            <span>단백질</span>
+            <strong>142g</strong>
+            <p>18g 남음</p>
+          </article>
+          <article class="metric-card">
+            <span>탄수화물</span>
+            <strong>248g</strong>
+            <p>32g 남음</p>
+          </article>
+          <article class="metric-card">
+            <span>지방</span>
+            <strong>62g</strong>
+            <p>목표 근접</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="goal-summary goal-summary-bulk">
+        <div class="dashboard-grid">
+          <article class="metric-card large-card">
+            <span>칼로리</span>
+            <strong>2,520 / 2,800</strong>
+            <div class="progress"><span style="width: 90%"></span></div>
+          </article>
+          <article class="metric-card">
+            <span>단백질</span>
+            <strong>156g</strong>
+            <p>24g 남음</p>
+          </article>
+          <article class="metric-card">
+            <span>탄수화물</span>
+            <strong>305g</strong>
+            <p>45g 남음</p>
+          </article>
+          <article class="metric-card">
+            <span>지방</span>
+            <strong>71g</strong>
+            <p>9g 남음</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="section two-column">
@@ -107,6 +163,82 @@
           <li>식사 입력 기능은 다음 단계에서 연결합니다.</li>
         </ul>
       </article>
+    </section>
+
+    <section class="section content-card daily-meal-report">
+      <div class="section-heading row-between">
+        <div>
+          <p class="eyebrow">하루 식단 리포트</p>
+          <h2>끼니별 균형 확인</h2>
+        </div>
+        <span class="future-pill">차트 연동 예정</span>
+      </div>
+
+      <div class="meal-report-grid">
+        <article class="meal-score-card">
+          <span class="score-label">오늘 식단 상태</span>
+          <strong>좋음</strong>
+          <p>칼로리와 단백질은 목표에 가깝고, 저녁 식사 기록만 추가하면 하루 흐름을 더 정확히 볼 수 있습니다.</p>
+        </article>
+
+        <article class="meal-chart-card">
+          <div class="meal-chart-row">
+            <div>
+              <strong>아침</strong>
+              <span>450 kcal</span>
+            </div>
+            <div class="meal-bar"><span style="width: 68%"></span></div>
+            <em class="status-good">균형</em>
+          </div>
+          <div class="meal-chart-row">
+            <div>
+              <strong>점심</strong>
+              <span>520 kcal</span>
+            </div>
+            <div class="meal-bar"><span style="width: 78%"></span></div>
+            <em class="status-good">좋음</em>
+          </div>
+          <div class="meal-chart-row">
+            <div>
+              <strong>간식</strong>
+              <span>180 kcal</span>
+            </div>
+            <div class="meal-bar"><span style="width: 28%"></span></div>
+            <em class="status-watch">가벼움</em>
+          </div>
+          <div class="meal-chart-row">
+            <div>
+              <strong>저녁</strong>
+              <span>미기록</span>
+            </div>
+            <div class="meal-bar muted-bar"><span style="width: 12%"></span></div>
+            <em class="status-empty">대기</em>
+          </div>
+        </article>
+      </div>
+
+      <div class="nutrition-mini-grid">
+        <article>
+          <span>식사 기록률</span>
+          <strong>3 / 4</strong>
+          <p>저녁 기록 필요</p>
+        </article>
+        <article>
+          <span>단백질 흐름</span>
+          <strong>안정</strong>
+          <p>점심 단백질 섭취 좋음</p>
+        </article>
+        <article>
+          <span>칼로리 페이스</span>
+          <strong>적정</strong>
+          <p>목표의 89% 진행</p>
+        </article>
+        <article>
+          <span>개선 포인트</span>
+          <strong>수분</strong>
+          <p>600ml 추가 권장</p>
+        </article>
+      </div>
     </section>
   </main>
 </body>

@@ -223,6 +223,13 @@ main {
   color: white;
 }
 
+.compact-button {
+  min-height: 40px;
+  background: var(--green-700);
+  color: white;
+  box-shadow: none;
+}
+
 .hero-panel,
 .metric-card,
 .feature-card,
@@ -447,16 +454,33 @@ main {
   margin-top: 18px;
 }
 
+.goal-radio {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.diet-goal-board {
+  overflow: visible;
+}
+
 .choice-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 18px;
   background: #fbfdfb;
+  cursor: pointer;
 }
 
-.choice-card.selected {
+.choice-card:focus-within,
+#goal-cut:checked ~ .choice-grid label[for="goal-cut"],
+#goal-maintain:checked ~ .choice-grid label[for="goal-maintain"],
+#goal-bulk:checked ~ .choice-grid label[for="goal-bulk"] {
   border-color: var(--green-700);
   background: var(--green-50);
+  box-shadow: 0 14px 34px rgba(16, 35, 28, 0.08);
 }
 
 .choice-card strong {
@@ -469,6 +493,17 @@ main {
   display: block;
   margin-top: 8px;
   color: var(--muted);
+}
+
+.goal-summary {
+  display: none;
+  margin-top: 22px;
+}
+
+#goal-cut:checked ~ .goal-summary-cut,
+#goal-maintain:checked ~ .goal-summary-maintain,
+#goal-bulk:checked ~ .goal-summary-bulk {
+  display: block;
 }
 
 .future-pill {
@@ -591,6 +626,351 @@ main {
     linear-gradient(135deg, rgba(240, 251, 245, 0.95), rgba(231, 240, 255, 0.78));
 }
 
+.meal-report-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: 18px;
+}
+
+.meal-score-card,
+.meal-chart-card,
+.nutrition-mini-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.meal-score-card {
+  padding: 24px;
+  background:
+    linear-gradient(145deg, rgba(243, 250, 245, 0.98), rgba(231, 240, 255, 0.62));
+}
+
+.score-label,
+.nutrition-mini-grid span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.meal-score-card strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--green-800);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.meal-score-card p {
+  margin-top: 14px;
+}
+
+.meal-chart-card {
+  padding: 20px;
+}
+
+.meal-chart-row {
+  display: grid;
+  grid-template-columns: 86px minmax(120px, 1fr) 62px;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+
+.meal-chart-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.meal-chart-row:last-child {
+  padding-bottom: 0;
+}
+
+.meal-chart-row strong,
+.meal-chart-row span {
+  display: block;
+}
+
+.meal-chart-row span {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.meal-bar {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #eef6f0;
+}
+
+.meal-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green-700), var(--mint));
+}
+
+.muted-bar span {
+  background: linear-gradient(90deg, #c9d8cf, #e2ebe5);
+}
+
+.meal-chart-row em {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.status-good {
+  background: var(--green-100);
+  color: var(--green-800);
+}
+
+.status-watch {
+  background: var(--amber-100);
+  color: var(--amber-700);
+}
+
+.status-empty {
+  background: #eef2f0;
+  color: var(--muted);
+}
+
+.nutrition-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.nutrition-mini-grid article {
+  padding: 18px;
+}
+
+.nutrition-mini-grid strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--green-900);
+  font-size: 1.35rem;
+}
+
+.nutrition-mini-grid p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.workout-log-section {
+  overflow: visible;
+}
+
+.workout-log-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.workout-log-card + .workout-log-card,
+.workout-entry-slot {
+  margin-top: 16px;
+}
+
+.workout-log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(243, 250, 245, 0.96), rgba(231, 240, 255, 0.46));
+  border-bottom: 1px solid var(--line);
+}
+
+.log-date {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.log-meta {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.workout-log-header strong {
+  color: var(--green-800);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.workout-items {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.workout-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f8fbf9;
+}
+
+.workout-number {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--green-700);
+  color: white;
+  font-weight: 900;
+}
+
+.workout-item h3 {
+  font-size: 1rem;
+}
+
+.workout-item p {
+  margin-top: 4px;
+  color: #31453c;
+}
+
+.workout-item small {
+  display: block;
+  margin-top: 6px;
+  color: var(--green-800);
+}
+
+.workout-entry-slot {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+}
+
+.health-management-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: 18px;
+}
+
+.condition-card,
+.medicine-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.condition-card {
+  padding: 20px;
+}
+
+.condition-card + .condition-card {
+  margin-top: 14px;
+}
+
+.condition-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.condition-header strong,
+.medicine-item strong {
+  color: var(--green-900);
+  font-size: 1.05rem;
+}
+
+.condition-header span {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.condition-card p,
+.condition-card li {
+  color: var(--muted);
+}
+
+.condition-card ul {
+  margin-top: 12px;
+  padding-left: 0;
+}
+
+.condition-card li {
+  margin-top: 7px;
+  list-style-position: inside;
+}
+
+.medicine-list {
+  display: grid;
+  gap: 14px;
+}
+
+.medicine-item {
+  padding: 18px;
+}
+
+.medicine-item > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.medicine-item > div:first-child span {
+  color: var(--green-800);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.medicine-item dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.medicine-item dl div {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--green-50);
+}
+
+.medicine-item dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.medicine-item dd {
+  margin-top: 4px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.medicine-entry-slot {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  margin-top: 14px;
+}
+
 @media (max-width: 900px) {
   .navbar {
     align-items: flex-start;
@@ -604,12 +984,15 @@ main {
 
   .hero,
   .two-column,
+  .health-management-grid,
+  .meal-report-grid,
   .dashboard-grid,
   .choice-grid {
     grid-template-columns: 1fr;
   }
 
   .stats-grid,
+  .nutrition-mini-grid,
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -629,7 +1012,12 @@ main {
   }
 
   .stats-grid,
+  .nutrition-mini-grid,
   .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meal-chart-row {
     grid-template-columns: 1fr;
   }
 
@@ -640,5 +1028,21 @@ main {
   .row-between {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .workout-log-header,
+  .workout-entry-slot,
+  .medicine-entry-slot {
+    align-items: flex-start;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .workout-log-header strong {
+    white-space: normal;
+  }
+
+  .medicine-item dl {
+    grid-template-columns: 1fr;
   }
 }
