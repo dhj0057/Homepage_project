@@ -3,181 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>운동 분석</title>
-  <link rel="stylesheet" href="../css/exercise.css" />
+  <title>HaruFit | 운동 분석</title>
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <main class="page">
-
-    <header class="page-header">
-      <h1>운동 분석</h1>
-      <p>인바디 수치 기반 약점 분석 및 루틴 관리</p>
-    </header>
-
-    <section class="card">
-      <div class="row-between">
-        <h2>인바디 수치</h2>
-        <span class="sub-text">측정일: 2026-05-10</span>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <p>체중</p>
-          <strong>75.2</strong>
-          <span>kg</span>
-        </div>
-        <div class="stat-card">
-          <p>골격근량</p>
-          <strong class="green">35.8</strong>
-          <span>kg</span>
-        </div>
-        <div class="stat-card">
-          <p>체지방률</p>
-          <strong class="blue">15.2</strong>
-          <span>%</span>
-        </div>
-        <div class="stat-card">
-          <p>BMI</p>
-          <strong>23.1</strong>
-          <span>정상</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>주간 운동 루틴</h2>
-
-      <details class="routine" open>
-        <summary>
-          <span class="day">월</span>
-          <span><strong>하체</strong><small>17:00 - 18:30</small></span>
-          <span class="duration">🏃 90분</span>
-        </summary>
-        <div class="exercise-list">
-          <div>바벨 스쿼트 <span>80kg</span><span>4 세트</span><span>8회</span></div>
-          <div>레그프레스 <span>150kg</span><span>4 세트</span><span>12회</span></div>
-          <div>불가리안 스플릿 스쿼트 <span>20kg</span><span>3 세트</span><span>10회</span></div>
-          <div>레그 컬 <span>40kg</span><span>3 세트</span><span>12회</span></div>
-          <div>카프 레이즈 <span>60kg</span><span>4 세트</span><span>15회</span></div>
-        </div>
-      </details>
-
-      <details class="routine">
-        <summary>
-          <span class="day">수</span>
-          <span><strong>상체 밀기</strong><small>17:00 - 18:15</small></span>
-          <span class="duration">🏃 75분</span>
-        </summary>
-        <div class="exercise-list">
-          <div>바벨 벤치프레스 <span>70kg</span><span>4 세트</span><span>8회</span></div>
-          <div>인클라인 덤벨 프레스 <span>24kg</span><span>3 세트</span><span>10회</span></div>
-          <div>숄더프레스 <span>20kg</span><span>4 세트</span><span>10회</span></div>
-          <div>사이드 레터럴 레이즈 <span>8kg</span><span>3 세트</span><span>12회</span></div>
-          <div>딥스 <span>체중</span><span>3 세트</span><span>12회</span></div>
-        </div>
-      </details>
-
-      <details class="routine">
-        <summary>
-          <span class="day">금</span>
-          <span><strong>상체 당기기</strong><small>17:00 - 18:30</small></span>
-          <span class="duration">🏃 90분</span>
-        </summary>
-        <div class="exercise-list">
-          <div>데드리프트 <span>100kg</span><span>4 세트</span><span>6회</span></div>
-          <div>풀업 <span>체중</span><span>4 세트</span><span>8회</span></div>
-          <div>바벨 로우 <span>65kg</span><span>4 세트</span><span>10회</span></div>
-          <div>시티드 케이블 로우 <span>50kg</span><span>3 세트</span><span>12회</span></div>
-        </div>
-      </details>
-
-      <details class="routine">
-        <summary>
-          <span class="day">토</span>
-          <span><strong>유산소 + 코어</strong><small>10:00 - 11:00</small></span>
-          <span class="duration">🏃 60분</span>
-        </summary>
-        <div class="exercise-list">
-          <div>러닝머신 <span>9km/h</span><span>1 세트</span><span>30분</span></div>
-          <div>플랭크 <span>체중</span><span>3 세트</span><span>60초</span></div>
-          <div>사이드 플랭크 <span>체중</span><span>3 세트</span><span>45초</span></div>
-          <div>행잉 레그 레이즈 <span>체중</span><span>3 세트</span><span>12회</span></div>
-        </div>
-      </details>
-    </section>
-
-    <section class="card">
-      <h2>약점 분석</h2>
-
-      <div class="analysis-card">
-        <div class="icon">⚠️</div>
-        <div>
-          <h3>하체 근력 <span class="badge red">약점</span></h3>
-          <p>스쿼트 중량 정체 (80kg → 80kg, 4주)</p>
-          <strong>💡 점진적 과부하 원리 적용 필요. 주 2회 → 3회로 증가</strong>
-        </div>
-      </div>
-
-      <div class="analysis-card">
-        <div class="icon">⚠️</div>
-        <div>
-          <h3>어깨 안정성 <span class="badge yellow">주의</span></h3>
-          <p>오버헤드 프레스 시 불균형 감지</p>
-          <strong>💡 로테이터 커프 강화 운동 추가 (밴드 운동)</strong>
-        </div>
-      </div>
-
-      <div class="analysis-card">
-        <div class="icon">⚠️</div>
-        <div>
-          <h3>유연성 <span class="badge blue">개선 필요</span></h3>
-          <p>햄스트링 유연성 부족 (손끝-발끝 거리: 15cm)</p>
-          <strong>💡 스트레칭 루틴 운동 전후 10분씩 추가</strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="row-between">
-        <h2>운동 기록</h2>
-        <button class="primary-button">＋ 기록 추가</button>
-      </div>
-
-      <div class="log">
-        <div class="log-header">📅 <strong>2026-05-12</strong> <span>(월요일 - 하체)</span><em>3개 운동 완료</em></div>
-        <div class="log-item"><b>1</b><div>바벨 스쿼트<p>✓ 80kg × 4세트 × 8회</p><i>📝 마지막 세트 힘들었음</i></div></div>
-        <div class="log-item"><b>2</b><div>레그프레스<p>✓ 150kg × 4세트 × 12회</p></div></div>
-        <div class="log-item"><b>3</b><div>레그 컬<p>✓ 40kg × 3세트 × 12회</p><i>📝 폼 집중</i></div></div>
-      </div>
-
-      <div class="log">
-        <div class="log-header">📅 <strong>2026-05-10</strong> <span>(토요일 - 유산소)</span><em>3개 운동 완료</em></div>
-        <div class="log-item"><b>1</b><div>러닝머신<p>✓ 9km/h × 30분</p><i>📝 5km 완주</i></div></div>
-        <div class="log-item"><b>2</b><div>플랭크<p>✓ 3세트 × 60초</p></div></div>
-        <div class="log-item"><b>3</b><div>행잉 레그 레이즈<p>✓ 3세트 × 12회</p><i>📝 복근 자극 좋음</i></div></div>
-      </div>
-
-      <div class="log">
-        <div class="log-header">📅 <strong>2026-05-09</strong> <span>(금요일 - 상체 당기기)</span><em>4개 운동 완료</em></div>
-        <div class="log-item"><b>1</b><div>데드리프트<p>✓ 100kg × 4세트 × 6회</p><i>📝 그립력 유지 잘됨</i></div></div>
-        <div class="log-item"><b>2</b><div>풀업<p>✓ 4세트 × 8회</p></div></div>
-        <div class="log-item"><b>3</b><div>바벨 로우<p>✓ 65kg × 4세트 × 10회</p><i>📝 등 펌핑 좋음</i></div></div>
-      </div>
-    </section>
-
-    <section class="tip-box">
-      <h3>💡 운동 팁</h3>
-      <ul>
-        <li>17:00~20:00 루틴: 최적의 체온과 호르몬 분비 시간대</li>
-        <li>운동 직후 탄수화물 섭취로 근글리코겐 회복</li>
-        <li>점진적 과부하 원칙: 매주 2.5~5kg 또는 반복횟수 1~2회 증가</li>
+  <header class="site-header">
+    <nav class="navbar" aria-label="주요 메뉴">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" focusable="false">
+            <path d="M5 22h7l4-11 7 22 5-14h7" />
+          </svg>
+        </span>
+        HaruFit
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="diet.html">식단</a></li>
+        <li><a class="active" href="exercise.html">운동</a></li>
+        <li><a href="health.html">건강</a></li>
       </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title section">
+      <p class="eyebrow">Exercise Analysis</p>
+      <h1>운동 분석</h1>
+      <p>인바디 수치와 주간 운동 루틴을 바탕으로 운동 상태를 확인합니다.</p>
     </section>
 
-    <section class="notice">
-      <strong>알림:</strong> 현재 인바디 수치와 운동 기록은 예시 데이터입니다. 향후 업데이트에서 사용자가 직접 입력하고 추적할 수 있습니다.
+    <section class="section stats-grid">
+      <article class="metric-card">
+        <span>체중</span>
+        <strong>75.2kg</strong>
+        <p>이번 주 안정적</p>
+      </article>
+      <article class="metric-card">
+        <span>골격근량</span>
+        <strong>35.8kg</strong>
+        <p>월간 +0.4kg</p>
+      </article>
+      <article class="metric-card">
+        <span>체지방률</span>
+        <strong>15.2%</strong>
+        <p>정상 범위</p>
+      </article>
+      <article class="metric-card">
+        <span>BMI</span>
+        <strong>23.1</strong>
+        <p>정상</p>
+      </article>
     </section>
 
+    <section class="section two-column">
+      <article class="content-card">
+        <div class="section-heading row-between">
+          <h2>주간 운동 루틴</h2>
+          <span class="future-pill">루틴 편집 예정</span>
+        </div>
+        <div class="list-item">
+          <span>월</span>
+          <div><strong>하체</strong><p>17:00 - 18:30 · 스쿼트, 레그프레스, 런지</p></div>
+        </div>
+        <div class="list-item">
+          <span>수</span>
+          <div><strong>상체 밀기</strong><p>17:00 - 18:15 · 벤치프레스, 숄더프레스</p></div>
+        </div>
+        <div class="list-item">
+          <span>금</span>
+          <div><strong>상체 당기기</strong><p>17:00 - 18:30 · 데드리프트, 로우, 풀업</p></div>
+        </div>
+        <div class="list-item empty-slot">
+          <span>+</span>
+          <div><strong>운동 기록 추가 영역</strong><p>나중에 운동 세트, 중량, 반복 횟수 입력 기능을 붙일 자리입니다.</p></div>
+        </div>
+      </article>
+      <article class="content-card highlight-card">
+        <h2>분석 메모</h2>
+        <ul class="check-list">
+          <li>하체 근력은 꾸준히 증가하는 흐름입니다.</li>
+          <li>어깨 안정성 운동을 루틴에 추가할 예정입니다.</li>
+          <li>운동 기록 데이터가 쌓이면 약점 분석을 자동화할 수 있습니다.</li>
+        </ul>
+      </article>
+    </section>
   </main>
 </body>
 </html>

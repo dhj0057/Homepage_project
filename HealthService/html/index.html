@@ -1,141 +1,137 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link rel="stylesheet" href="../css/home.css" />
+  <title>HaruFit | 메인</title>
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="주요 메뉴">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" focusable="false">
+            <path d="M5 22h7l4-11 7 22 5-14h7" />
+          </svg>
+        </span>
+        HaruFit
+      </a>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">홈</a></li>
+        <li><a href="diet.html">식단</a></li>
+        <li><a href="exercise.html">운동</a></li>
+        <li><a href="health.html">건강</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="container">
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>
-        데이터 기반 건강 관리 플랫폼
-      </h1>
-
-      <p class="hero-text">
-        구체적이고 기계적인 수치로 식단, 운동, 질환을 관리하세요.
-        <br />
-        정보 접근성을 통해 더 건강한 선택을 지원합니다.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="diet.html" class="btn-primary">
-          식단 기록 시작하기
-        </a>
-
-        <a href="exercise.html" class="btn-secondary">
-          운동 계획 보기
-        </a>
+  <main>
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">데이터 기반 건강 관리 플랫폼</p>
+        <h1>하루의 식단, 운동, 건강 상태를 한눈에 관리하세요.</h1>
+        <p class="hero-text">
+          HaruFit은 사용자가 직접 기록한 건강 데이터를 바탕으로 식단 관리,
+          운동 분석, 건강 지표 확인까지 이어지는 대시보드입니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="diet.html">식단 기록 시작하기</a>
+          <a class="button secondary" href="exercise.html">운동 계획 보기</a>
+        </div>
       </div>
+      <aside class="hero-panel" aria-label="오늘의 건강 요약">
+        <span class="panel-label">오늘의 건강 점수</span>
+        <strong>87</strong>
+        <p>식단, 운동, 복용 기록을 기반으로 산출될 예정입니다.</p>
+      </aside>
     </section>
 
-    <!-- Feature Cards -->
-    <section class="feature-grid">
-
-      <a href="diet.html" class="card">
-        <div class="icon-box">🍎</div>
-
-        <h3>식단 관리</h3>
-
-        <p>
-          영양학적 데이터를 기반으로 식사 시간, 칼로리,
-          매크로 영양소를 추적하세요.
-        </p>
-      </a>
-
-      <a href="exercise.html" class="card">
-        <div class="icon-box">🏋️</div>
-
-        <h3>운동 분석</h3>
-
-        <p>
-          인바디 수치와 약점 분석을 통해 맞춤형 운동 루틴을 계획하세요.
-        </p>
-      </a>
-
-      <a href="health.html" class="card">
-        <div class="icon-box">💊</div>
-
-        <h3>건강 관리</h3>
-
-        <p>
-          약학적 관점에서 영양제, 약물 복용 및 건강 지표를 체계적으로 관리하세요.
-        </p>
-      </a>
-
-    </section>
-
-    <!-- Stats -->
-    <section class="stats-section">
-
-      <h2>오늘의 건강 요약</h2>
-
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">오늘 요약</p>
+        <h2>대시보드 현황</h2>
+      </div>
       <div class="stats-grid">
-
-        <div class="stat-item">
-          <div class="stat-number">2,150</div>
-          <div class="stat-label">섭취 칼로리 (kcal)</div>
-        </div>
-
-        <div class="stat-item">
-          <div class="stat-number">65</div>
-          <div class="stat-label">운동 시간 (분)</div>
-        </div>
-
-        <div class="stat-item">
-          <div class="stat-number">8,500</div>
-          <div class="stat-label">걸음 수</div>
-        </div>
-
-        <div class="stat-item">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">약물 복용률</div>
-        </div>
-
+        <article class="metric-card">
+          <span>섭취 칼로리</span>
+          <strong>2,140</strong>
+          <p>목표 대비 89%</p>
+        </article>
+        <article class="metric-card">
+          <span>운동 시간</span>
+          <strong>64분</strong>
+          <p>목표보다 14분 초과</p>
+        </article>
+        <article class="metric-card">
+          <span>수분 섭취</span>
+          <strong>1.9L</strong>
+          <p>600ml 추가 필요</p>
+        </article>
+        <article class="metric-card">
+          <span>복용 기록</span>
+          <strong>100%</strong>
+          <p>오늘 일정 완료</p>
+        </article>
       </div>
-
     </section>
 
-    <!-- Mission -->
-    <section class="mission-section">
+    <section class="section feature-grid" aria-label="주요 기능">
+      <a class="feature-card" href="diet.html" aria-label="식단 관리 페이지로 이동">
+        <div class="feature-card-top">
+          <div class="feature-icon feature-icon-diet" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              <path d="M24 16c-4 0-8 4-8 11 0 7 4 13 8 13s8-6 8-13c0-7-4-11-8-11Z" />
+              <path d="M24 16c0-5 3-8 8-8" />
+              <path d="M24 16c-3-5-8-6-12-3" />
+            </svg>
+          </div>
+          <span class="feature-arrow">→</span>
+        </div>
+        <h3>식단 관리</h3>
+        <p>하루 식사, 칼로리, 단백질, 탄수화물, 지방 섭취량을 확인합니다.</p>
+      </a>
 
-      <div class="mission-icon">
-        📈
-      </div>
+      <a class="feature-card" href="exercise.html" aria-label="운동 분석 페이지로 이동">
+        <div class="feature-card-top">
+          <div class="feature-icon feature-icon-exercise" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              <path d="M9 28v-8" />
+              <path d="M15 32V16" />
+              <path d="M33 32V16" />
+              <path d="M39 28v-8" />
+              <path d="M15 24h18" />
+            </svg>
+          </div>
+          <span class="feature-arrow">→</span>
+        </div>
+        <h3>운동 분석</h3>
+        <p>인바디 수치와 운동 루틴을 바탕으로 운동 상태를 점검합니다.</p>
+      </a>
 
-      <div class="mission-content">
-
-        <h3>우리의 목표</h3>
-
-        <p>
-          이 플랫폼은 나뿐만 아니라 다른 사람들도 식단, 영양,
-          약학, 운동 분야에서 구체적이고 기계적인 수치로 도움받을 수 있도록 설계되었습니다.
-          많은 사람들이 정보 부족으로 인해 건강하지 않은 선택을 하지 않도록,
-          데이터 기반의 명확한 가이드를 제공하는 것이 목표입니다.
-        </p>
-
-      </div>
-
+      <a class="feature-card" href="health.html" aria-label="건강 관리 페이지로 이동">
+        <div class="feature-card-top">
+          <div class="feature-icon feature-icon-health" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              <path d="M24 39s-14-8-14-19a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 11-14 19-14 19Z" />
+              <path d="M13 24h7l3-6 5 12 3-6h4" />
+            </svg>
+          </div>
+          <span class="feature-arrow">→</span>
+        </div>
+        <h3>건강 관리</h3>
+        <p>혈압, 심박수, 복용 일정, 질환 관리 정보를 한곳에서 확인합니다.</p>
+      </a>
     </section>
 
-    <!-- Notice -->
-    <section class="notice-section">
-
+    <section class="section placeholder-card">
+      <p class="eyebrow">추후 확장 영역</p>
+      <h2>JavaScript, React, 데이터베이스 연동 예정</h2>
       <p>
-        <strong>알림:</strong>
-        현재 버전은 UI 프로토타입입니다.
-        데이터베이스 연동 및 실시간 데이터 저장 기능은 향후 학습 후 추가될 예정입니다.
-        현재는 더미 데이터를 활용하여 레이아웃과 기능 흐름을 확인하실 수 있습니다.
+        현재는 정적 UI만 구현되어 있습니다. 이후 사용자 입력, 데이터 저장,
+        로그인, 통계 차트, 개인별 추천 기능을 이 영역과 각 페이지에 연결할 수 있습니다.
       </p>
-
     </section>
-
-  </div>
-
+  </main>
 </body>
 </html>
